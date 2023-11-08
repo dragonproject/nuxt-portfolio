@@ -22,7 +22,4 @@ const { data } = await useAsyncData(useRoute().path, () =>
 const [prev, next] = await queryContent("/blog")
   .sort({ id: 1 })
   .findSurround(useRoute().path);
-
-console.log("prev:", prev);
-console.log("next:", next);
 </script>
