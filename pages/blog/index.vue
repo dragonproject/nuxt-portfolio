@@ -18,6 +18,7 @@
     <Pagination :numberPages="numberPages" />
   </div>
 </template>
+
 <script setup>
 const blogsPerPage = 5;
 
@@ -26,10 +27,9 @@ const { data } = await useAsyncData("blogQuery", () =>
 );
 
 const allBlogs = await queryContent("/blog").find();
-const numberPages = Math.ceil(allBlogs.length / blogsPerPage);
-</script>
 
-<script setup>
+const numberPages = Math.ceil(allBlogs.length / blogsPerPage);
+
 useHead({
   title: "ブログ",
   meta: [{ name: "description", content: "ブログページです" }],
