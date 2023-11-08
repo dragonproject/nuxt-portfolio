@@ -45,3 +45,10 @@
     </div>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "Abe Hiroki Official Site",
+  meta: [{ name: "description", content: "Abe Hirokiのポートファリオサイトです" }],
+});
+</script>

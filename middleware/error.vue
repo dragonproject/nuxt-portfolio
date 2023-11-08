@@ -4,3 +4,10 @@
     <p>ページが見つかりません。</p>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "エラーページ",
+  meta: [{ name: "description", content: "エラーページです" }],
+});
+</script>
