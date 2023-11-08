@@ -3,7 +3,7 @@
     <div class="hero">
       <nuxt-img src="/images/index-hero.jpg" alt="hero" format="webp" />
       <div class="textContainer">
-        <h1>I'm Abe Hiroki</h1>
+        <h1>I'm Ryutaro Seki</h1>
         <h3>JavaScript Developer</h3>
       </div>
     </div>
