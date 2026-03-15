@@ -64,6 +64,63 @@
         </div>
       </section>
 
+      <!-- Works Section (Bento Grid) -->
+      <section class="space-y-12">
+        <div class="text-center space-y-4">
+          <h2 class="text-3xl font-bold">制作実績</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto">これまでに制作した主要なプロジェクトをご紹介します。</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px]">
+          <!-- Feature project (Large Bento Card) -->
+          <Card class="md:col-span-3 md:row-span-2 overflow-hidden group relative border-none bg-zinc-900">
+            <NuxtLink to="https://next-market-server-actions-silk.vercel.app/" target="_blank" class="block h-full">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+              <nuxt-img 
+                src="/images/next-market.png" 
+                alt="Next Market" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute bottom-0 left-0 p-8 z-20 space-y-3">
+                <div class="flex gap-2">
+                  <Badge variant="secondary" class="bg-white/20 backdrop-blur text-white border-none text-xs">Next.js</Badge>
+                  <Badge variant="secondary" class="bg-white/20 backdrop-blur text-white border-none text-xs">Full Stack</Badge>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Next Market</h3>
+                <p class="text-zinc-300 max-w-lg">Server Actionsを活用した、高速でセキュアなマーケットプレイス・アプリケーション。ユーザー認証、商品出品、詳細閲覧機能を備えたモダンなプロダクトです。</p>
+              </div>
+            </NuxtLink>
+          </Card>
+
+          <!-- Small Bento Card 1 -->
+          <Card class="md:col-span-1 md:row-span-1 p-6 flex flex-col justify-between bg-card hover:border-primary/50 transition-colors">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              </div>
+              <h3 class="font-bold text-xl">Nuxt Portfolio</h3>
+              <p class="text-sm text-muted-foreground">このポートフォリオサイト自体も、Nuxt 3とTailwind CSSで構築された作品の一つです。</p>
+            </div>
+            <div class="flex flex-wrap gap-2 text-[10px]">
+              <span class="px-2 py-0.5 rounded-full bg-secondary">Nuxt 3</span>
+              <span class="px-2 py-0.5 rounded-full bg-secondary">Tailwind</span>
+            </div>
+          </Card>
+
+          <!-- Small Bento Card 2 -->
+          <Card class="md:col-span-1 md:row-span-1 p-6 flex flex-col justify-between bg-zinc-100 dark:bg-zinc-800 border-none">
+             <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <h3 class="font-bold text-xl">Future Project</h3>
+              <p class="text-sm text-muted-foreground">現在、AIを活用した新しいプロジェクトを企画・進行中です。</p>
+            </div>
+            <p class="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">Coming Soon</p>
+          </Card>
+        </div>
+      </section>
+
       <!-- CTA Section -->
       <section class="rounded-3xl bg-primary text-primary-foreground p-8 md:p-16 text-center space-y-8">
         <h2 class="text-3xl md:text-5xl font-bold">新しいプロジェクトを始めましょう</h2>
@@ -80,6 +137,8 @@
 </template>
 
 <script setup>
+import { Badge } from '@/components/ui/badge'
+
 const skills = [
   { name: 'JavaScript', exp: 10, icon: '/images/javascript.svg' },
   { name: 'React', exp: 4, icon: '/images/react.svg' },
