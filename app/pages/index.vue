@@ -141,6 +141,7 @@ import { Badge } from '@/components/ui/badge'
 
 const skills = [
   { name: 'JavaScript', exp: 10, icon: '/images/javascript.svg' },
+  { name: 'Next.js', exp: 6, icon: '/images/nextjs.svg' },
   { name: 'React', exp: 4, icon: '/images/react.svg' },
   { name: 'Vue', exp: 4, icon: '/images/vue.svg' },
   { name: 'Nuxt', exp: 3, icon: '/images/nuxt.svg' },
