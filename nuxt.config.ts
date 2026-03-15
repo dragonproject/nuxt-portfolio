@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-07-15',
+  future: {
+    compatibilityVersion: 4,
+  },
   devtools: {
     enabled: true,
 
@@ -7,16 +11,30 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules:[
+  modules: [
     "@nuxt/content",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxtjs/tailwindcss",
+    "shadcn-nuxt"
   ],
-  css:[
-    "~/assets/styles/common.css",
-    "~/assets/styles/layout.css",
-    "~/assets/styles/index.css",
-    "~/assets/styles/blog.css",
-    "~/assets/styles/contact.css",
-    "~/assets/styles/singleBlog.css",
-  ]
+  shadcn: {
+    /**
+     * Prefix for all the imported components
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './app/components/ui'
+  },
+  css: [
+    "~/assets/css/tailwind.css"
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 })
