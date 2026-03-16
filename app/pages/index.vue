@@ -1,16 +1,55 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <!-- Hero Section -->
-    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
-      <nuxt-img 
-        src="/images/index-hero.jpg" 
-        alt="hero" 
-        format="webp" 
-        class="absolute inset-0 w-full h-full object-cover brightness-50"
-      />
-      <div class="container relative z-10 text-center text-white space-y-4">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight">Ryutaro Seki</h1>
-        <p class="text-xl md:text-2xl font-light text-zinc-300">JavaScript Developer & Tech Enthusiast</p>
+    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden bg-zinc-950">
+      <!-- Animated Background Layers -->
+      <div class="absolute inset-0">
+        <nuxt-img 
+          src="/images/modern-hero-warm.png" 
+          alt="hero background" 
+          format="webp" 
+          class="absolute inset-0 w-full h-full object-cover scale-105 animate-pulse-slow opacity-60"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/20 to-zinc-950"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0)_0%,rgba(0,0,0,0.4)_100%)]"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container relative z-10">
+        <div class="max-w-4xl mx-auto text-center space-y-10 group">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/5 border border-amber-500/10 backdrop-blur-md mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <span class="text-xs font-bold text-amber-200/60 uppercase tracking-[0.2em]">Available for new projects</span>
+          </div>
+
+          <div class="space-y-6">
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-white animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+              Transforming <br class="hidden md:block" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-600">Ideas into Reality.</span>
+            </h1>
+            <p class="text-xl md:text-3xl font-light text-zinc-400 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+              Ryutaro Seki — JavaScript Developer & <br class="hidden sm:block" />
+              Creator based in Japan.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
+            <Button as-child size="xl" class="rounded-full px-10 py-7 text-lg font-bold bg-amber-500 text-white hover:bg-amber-600 shadow-2xl shadow-amber-500/20 hover:scale-105 transition-transform duration-500 border-none">
+              <NuxtLink to="/blogs">Read Latest Blogs</NuxtLink>
+            </Button>
+            <Button variant="outline" size="xl" as-child class="rounded-full px-10 py-7 text-lg font-bold border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/20 text-white transition-all duration-500">
+              <NuxtLink to="/contact">Get in Touch</NuxtLink>
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5"/><path d="m7 6 5 5 5-5"/></svg>
       </div>
     </section>
 
