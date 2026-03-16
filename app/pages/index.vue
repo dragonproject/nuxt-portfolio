@@ -1,55 +1,77 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <!-- Hero Section -->
-    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden bg-zinc-950">
-      <!-- Animated Background Layers -->
-      <div class="absolute inset-0">
-        <nuxt-img 
-          src="/images/modern-hero-warm.png" 
-          alt="hero background" 
-          format="webp" 
-          class="absolute inset-0 w-full h-full object-cover scale-105 animate-pulse-slow opacity-60"
-        />
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/20 to-zinc-950"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0)_0%,rgba(0,0,0,0.4)_100%)]"></div>
-      </div>
+    <section class="relative min-h-[90vh] flex items-center bg-[#E97451] selection:bg-white selection:text-[#E97451] overflow-hidden">
+      <!-- Background Decorative Elements -->
+      <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-orange-400 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
+      <div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-amber-300 rounded-full blur-[100px] opacity-20"></div>
 
-      <!-- Content -->
-      <div class="container relative z-10">
-        <div class="max-w-4xl mx-auto text-center space-y-10 group">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/5 border border-amber-500/10 backdrop-blur-md mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-            </span>
-            <span class="text-xs font-bold text-amber-200/60 uppercase tracking-[0.2em]">Available for new projects</span>
-          </div>
-
-          <div class="space-y-6">
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-white animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-              Transforming <br class="hidden md:block" />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-600">Ideas into Reality.</span>
+      <div class="container relative z-10 py-20">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left Content: Bold Typography -->
+          <div class="space-y-10 order-2 lg:order-1 text-center lg:text-left">
+            <h1 class="text-6xl md:text-8xl lg:text-[100px] font-black leading-[0.9] text-[#2D1610] tracking-tighter animate-in fade-in slide-in-from-left-8 duration-1000">
+              Ideas that <br />
+              <span class="text-white">stick.</span> Designs <br />
+              that <span class="italic font-serif">flow.</span>
             </h1>
-            <p class="text-xl md:text-3xl font-light text-zinc-400 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
-              Ryutaro Seki — JavaScript Developer & <br class="hidden sm:block" />
-              Creator based in Japan.
+            <p class="text-xl md:text-2xl font-medium text-[#2D1610]/80 max-w-xl leading-snug animate-in fade-in slide-in-from-left-12 duration-1000 delay-200">
+              Ryutaro Seki is a JavaScript Developer building high-performance, beautiful digital worlds from Japan.
             </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 justify-center lg:justify-start">
+              <Button as-child size="xl" class="rounded-full px-10 py-8 text-xl font-black bg-[#2D1610] text-[#E97451] hover:bg-[#3D1E16] transition-all hover:scale-105 shadow-xl border-none">
+                <NuxtLink to="/blogs">Read My Work</NuxtLink>
+              </Button>
+              <Button variant="ghost" size="xl" as-child class="rounded-full px-10 py-8 text-xl font-black text-[#2D1610] hover:bg-white/10 transition-all underline decoration-4 underline-offset-8">
+                <NuxtLink to="/contact">Let's Talk</NuxtLink>
+              </Button>
+            </div>
           </div>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
-            <Button as-child size="xl" class="rounded-full px-10 py-7 text-lg font-bold bg-amber-500 text-white hover:bg-amber-600 shadow-2xl shadow-amber-500/20 hover:scale-105 transition-transform duration-500 border-none">
-              <NuxtLink to="/blogs">Read Latest Blogs</NuxtLink>
-            </Button>
-            <Button variant="outline" size="xl" as-child class="rounded-full px-10 py-7 text-lg font-bold border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/20 text-white transition-all duration-500">
-              <NuxtLink to="/contact">Get in Touch</NuxtLink>
-            </Button>
+          <!-- Right Content: Floating Mockup (Linktree Style) -->
+          <div class="relative order-1 lg:order-2 flex justify-center animate-in fade-in zoom-in duration-1000 delay-300">
+            <div class="w-[320px] h-[640px] bg-white rounded-[3rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] border-[8px] border-[#2D1610] p-6 flex flex-col items-center space-y-8 relative overflow-hidden group">
+              <!-- Top bar -->
+              <div class="w-16 h-1.5 bg-[#2D1610]/10 rounded-full mb-4"></div>
+              
+              <!-- Profile in Mockup -->
+              <div class="flex flex-col items-center space-y-4">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-[#E97451]/20 shadow-lg">
+                  <nuxt-img src="/images/profile.jpg" alt="profile" class="w-full h-full object-cover" />
+                </div>
+                <div class="text-center">
+                  <h3 class="text-xl font-black text-[#2D1610]">@ryutaro_seki</h3>
+                  <p class="text-sm font-bold text-[#E97451]">Available for Work</p>
+                </div>
+              </div>
+
+              <!-- Mock Links -->
+              <div class="w-full space-y-3 pt-4">
+                <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between group-hover:bg-[#E97451] group-hover:text-white transition-all cursor-pointer">
+                  <span class="font-bold">Latest Blog Post</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+                <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:scale-105 transition-transform">
+                  <span class="font-bold">My Projects</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+                <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:scale-105 transition-transform">
+                  <span class="font-bold">Contact Me</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </div>
+              </div>
+
+              <!-- Background pattern inside mockup -->
+              <div class="absolute inset-0 -z-10 opacity-[0.03] pointer-events-none">
+                <div class="absolute inset-0 bg-[radial-gradient(#E97451_1px,transparent_1px)] [background-size:20px_20px]"></div>
+              </div>
+            </div>
+
+            <!-- Decorative floating blobs around mockup -->
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-white/20 backdrop-blur-xl rounded-2xl rotate-12 -z-10 hidden sm:block"></div>
+            <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-[#2D1610]/10 backdrop-blur-xl rounded-full -z-10 hidden sm:block"></div>
           </div>
         </div>
-      </div>
-
-      <!-- Bottom Scroll Indicator -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5"/><path d="m7 6 5 5 5-5"/></svg>
       </div>
     </section>
 
