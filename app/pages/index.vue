@@ -94,17 +94,18 @@
 
           <!-- Small Bento Card 1 -->
           <Card class="md:col-span-1 md:row-span-1 p-6 flex flex-col justify-between bg-card hover:border-primary/50 transition-colors">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            <NuxtLink to="/blogs" class="flex flex-col h-full justify-between">
+              <div class="space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+                </div>
+                <h3 class="font-bold text-xl">Technical Blog</h3>
+                <p class="text-sm text-muted-foreground">開発の裏側や、日々の技術的な学びをアウトプットしています。</p>
               </div>
-              <h3 class="font-bold text-xl">Nuxt Portfolio</h3>
-              <p class="text-sm text-muted-foreground">このポートフォリオサイト自体も、Nuxt 3とTailwind CSSで構築された作品の一つです。</p>
-            </div>
-            <div class="flex flex-wrap gap-2 text-[10px]">
-              <span class="px-2 py-0.5 rounded-full bg-secondary">Nuxt 3</span>
-              <span class="px-2 py-0.5 rounded-full bg-secondary">Tailwind</span>
-            </div>
+              <div class="flex items-center gap-2 text-xs font-bold text-primary italic">
+                一覧を見る <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </div>
+            </NuxtLink>
           </Card>
 
           <!-- Small Bento Card 2 -->
@@ -114,7 +115,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
               </div>
               <h3 class="font-bold text-xl">Future Project</h3>
-              <p class="text-sm text-muted-foreground">現在、AIを活用した新しいプロジェクトを企画・進行中です。</p>
+              <p class="text-sm text-muted-foreground">現在、AIを活用した新しいプロジェクトを進行中です。</p>
             </div>
             <p class="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">Coming Soon</p>
           </Card>
@@ -152,4 +153,3 @@ useHead({
   meta: [{ name: "description", content: "Ryutaro Sekiのポートフォリオサイトです。JavaScript開発のエキスパート。" }],
 });
 </script>
-

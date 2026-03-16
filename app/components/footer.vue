@@ -13,7 +13,7 @@
         </a>
       </div>
       <nav class="flex gap-6 text-sm font-medium">
-        <NuxtLink to="/blog" class="hover:underline underline-offset-4">Blog</NuxtLink>
+        <NuxtLink to="/blogs" class="hover:underline underline-offset-4">Blogs</NuxtLink>
         <NuxtLink to="/contact" class="hover:underline underline-offset-4">Contact</NuxtLink>
       </nav>
       <Separator class="max-w-[200px]" />
