@@ -31,6 +31,15 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/tailwind.css"
   ],
+  app: {
+    head: {
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap' }
+      ]
+    }
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
