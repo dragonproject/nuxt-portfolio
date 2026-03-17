@@ -3,8 +3,8 @@
     <div class="container space-y-20">
       <!-- Header -->
       <div class="max-w-4xl space-y-6">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter">Blog</h1>
-        <p class="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-[#2D1610]">Blogs</h1>
+        <p class="text-xl md:text-2xl text-[#2D1610]/60 font-medium leading-relaxed">
           技術、創造性、そして日々の開発の中から得た気づきを発信しています。
         </p>
       </div>
@@ -13,10 +13,10 @@
       <div v-if="data" class="space-y-24">
         <!-- Empty State -->
         <div v-if="data.length === 0" class="text-center py-20 space-y-6 bg-zinc-50 rounded-[2.5rem]">
-          <div class="text-6xl text-zinc-300">empty</div>
-          <p class="text-zinc-500 italic">bogs not found... 記事がまだ投稿されていないか、読み込み中です。</p>
-          <Button as-child variant="outline">
-            <NuxtLink to="/">トップに戻る</NuxtLink>
+          <div class="text-6xl font-black text-zinc-300">Empty</div>
+          <p class="text-zinc-500 italic">Blogs not found... 記事がまだ投稿されていないか、読み込み中です。</p>
+          <Button as-child variant="outline" class="rounded-full px-8 border-[#2D1610] text-[#2D1610]">
+            <NuxtLink to="/">Back to Home</NuxtLink>
           </Button>
         </div>
 
@@ -42,8 +42,8 @@
               <p class="text-zinc-400 text-lg line-clamp-3">
                 {{ data[0].excerpt }}
               </p>
-              <div class="pt-4 inline-flex items-center gap-2 text-primary font-bold group-hover:translate-x-2 transition-transform">
-                記事を読む 
+              <div class="pt-4 inline-flex items-center gap-2 text-[#E97451] font-black group-hover:translate-x-2 transition-transform">
+                Read More 
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </div>
             </div>
@@ -99,7 +99,7 @@ const allBlogs = await queryCollection("blogs").all();
 const numberPages = Math.ceil(allBlogs.length / blogsPerPage);
 
 useHead({
-  title: "Blog | Insights and Stories",
+  title: "Blogs | Insights and Stories",
   meta: [{ name: "description", content: "エンジニアリング、テック、クリエイティビティに関するブログ記事一覧。" }],
 });
 </script>

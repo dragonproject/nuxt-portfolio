@@ -20,10 +20,10 @@
             </p>
             <div class="flex flex-col sm:flex-row items-center gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 justify-center lg:justify-start">
               <Button as-child size="xl" class="rounded-full px-10 py-8 text-xl font-black bg-[#2D1610] text-[#E97451] hover:bg-[#3D1E16] transition-all hover:scale-105 shadow-xl border-none">
-                <NuxtLink to="/blogs">Read My Work</NuxtLink>
+                <NuxtLink to="/blogs">Explore Blogs</NuxtLink>
               </Button>
               <Button variant="ghost" size="xl" as-child class="rounded-full px-10 py-8 text-xl font-black text-[#2D1610] hover:bg-white/10 transition-all underline decoration-4 underline-offset-8">
-                <NuxtLink to="/contact">Let's Talk</NuxtLink>
+                <NuxtLink to="/contact">Get in Touch</NuxtLink>
               </Button>
             </div>
           </div>
@@ -48,15 +48,15 @@
               <!-- Mock Links -->
               <div class="w-full space-y-3 pt-4">
                 <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between group-hover:bg-[#E97451] group-hover:text-white transition-all cursor-pointer">
-                  <span class="font-bold">Latest Blog Post</span>
+                  <span class="font-bold">Latest Post</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>
                 <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:scale-105 transition-transform">
-                  <span class="font-bold">My Projects</span>
+                  <span class="font-bold">Selected Works</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>
                 <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:scale-105 transition-transform">
-                  <span class="font-bold">Contact Me</span>
+                  <span class="font-bold">Contact</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </div>
               </div>
@@ -78,15 +78,21 @@
     <div class="container py-16 md:py-24 space-y-24">
       <!-- Profile Section -->
       <section class="grid md:grid-cols-5 gap-12 items-center">
-        <div class="md:col-span-3 space-y-6">
-          <h2 class="text-3xl font-bold border-l-4 border-primary pl-4">エンジニアとしての情熱</h2>
-          <p class="text-lg text-muted-foreground leading-relaxed">
+        <div class="md:col-span-3 space-y-8">
+          <div class="space-y-3">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-[#2D1610]">Passion for Code</h2>
+            <div class="flex items-center gap-3">
+              <div class="h-[2px] w-6 bg-[#E97451]"></div>
+              <span class="text-sm font-bold tracking-[0.2em] text-[#E97451] uppercase">エンジニアとしての情熱</span>
+            </div>
+          </div>
+          <p class="text-lg text-[#2D1610]/70 leading-relaxed font-medium">
             フロントエンド開発を中心に、10年以上に渡り多種多様なデジタルプロダクトの構築に携わってきました。
             単にコードを書くだけでなく、ユーザー体験（UX）を第一に考え、技術を通してビジネスの課題を解決することに価値を感じています。
             現在はモダンなJavaScriptフレームワークを活用し、高速で堅牢、かつ美しいインターフェースの実装に力を入れています。
           </p>
-          <Button as-child size="lg">
-            <NuxtLink to="/contact">お問い合わせ</NuxtLink>
+          <Button as-child size="xl" class="rounded-full px-8 bg-[#2D1610] text-white hover:bg-[#3D1E16]">
+            <NuxtLink to="/contact">Contact</NuxtLink>
           </Button>
         </div>
         <div class="md:col-span-2 relative group max-w-sm mx-auto w-full">
@@ -109,8 +115,15 @@
       <!-- Skills Section -->
       <section class="space-y-12">
         <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold">技術スタック</h2>
-          <p class="text-muted-foreground max-w-2xl mx-auto">10年にわたる開発経験の中で培ってきた、主要な技術スキルをご紹介します。</p>
+          <div class="inline-block">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-[#2D1610]">Technology Stack</h2>
+            <div class="flex items-center justify-center gap-4 mt-2">
+              <div class="h-[2px] w-8 bg-[#E97451]"></div>
+              <span class="text-sm font-bold tracking-[0.2em] text-[#E97451] uppercase">技術スタック</span>
+              <div class="h-[2px] w-8 bg-[#E97451]"></div>
+            </div>
+          </div>
+          <p class="text-muted-foreground max-w-2xl mx-auto pt-4 leading-relaxed">10年にわたる開発経験の中で培ってきた、主要な技術スキルをご紹介します。</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
           <Card v-for="skill in skills" :key="skill.name" class="p-6 text-center hover:shadow-lg transition-shadow bg-card/50 backdrop-blur">
@@ -128,8 +141,15 @@
       <!-- Works Section (Bento Grid) -->
       <section class="space-y-12">
         <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold">制作実績</h2>
-          <p class="text-muted-foreground max-w-2xl mx-auto">これまでに制作した主要なプロジェクトをご紹介します。</p>
+          <div class="inline-block">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-[#2D1610]">Selected Works</h2>
+            <div class="flex items-center justify-center gap-4 mt-2">
+              <div class="h-[2px] w-8 bg-[#E97451]"></div>
+              <span class="text-sm font-bold tracking-[0.2em] text-[#E97451] uppercase">制作実績</span>
+              <div class="h-[2px] w-8 bg-[#E97451]"></div>
+            </div>
+          </div>
+          <p class="text-[#2D1610]/60 max-w-2xl mx-auto pt-4 font-medium">これまでに制作した主要なプロジェクトの中から、いくつかをご紹介します。</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px]">
@@ -160,11 +180,11 @@
                 <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
                 </div>
-                <h3 class="font-bold text-xl">Technical Blog</h3>
-                <p class="text-sm text-muted-foreground">開発の裏側や、日々の技術的な学びをアウトプットしています。</p>
+                <h3 class="font-bold text-xl">Blogs</h3>
+                <p class="text-sm text-[#2D1610]/60">開発の裏側や、日々の技術的な学びをアウトプットしています。</p>
               </div>
-              <div class="flex items-center gap-2 text-xs font-bold text-primary italic">
-                一覧を見る <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <div class="flex items-center gap-2 text-xs font-bold text-[#E97451] italic">
+                View All <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </div>
             </NuxtLink>
           </Card>
@@ -184,15 +204,32 @@
       </section>
 
       <!-- CTA Section -->
-      <section class="rounded-3xl bg-primary text-primary-foreground p-8 md:p-16 text-center space-y-8">
-        <h2 class="text-3xl md:text-5xl font-bold">新しいプロジェクトを始めましょう</h2>
-        <p class="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+      <section class="relative overflow-hidden rounded-[3rem] bg-[#2D1610] text-[#E97451] p-12 md:p-24 text-center space-y-10 group">
+        <!-- Decor -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-[#E97451]/10 rounded-full blur-[100px] -z-0"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#E97451]/5 rounded-full blur-[80px] -z-0"></div>
+
+        <div class="relative z-10 space-y-6">
+          <h2 class="text-4xl md:text-7xl font-black tracking-tighter text-white leading-[0.9]">
+            Let's build <br />
+            something <span class="text-[#E97451] italic font-serif">extraordinary.</span>
+          </h2>
+          <div class="flex items-center justify-center gap-4">
+            <div class="h-[1px] w-12 bg-[#E97451]/40"></div>
+            <span class="text-sm font-bold tracking-[0.3em] uppercase opacity-80 text-white">新しいプロジェクトを始めましょう</span>
+            <div class="h-[1px] w-12 bg-[#E97451]/40"></div>
+          </div>
+        </div>
+        
+        <p class="relative z-10 text-[#E97451]/90 text-xl font-medium max-w-2xl mx-auto leading-relaxed">
           現在、フリーランスとしてのプロジェクトや技術コンサルティングのご依頼を承っております。
           あなたのビジョンを形にするお手伝いをさせてください。
         </p>
-        <Button variant="secondary" size="xl" as-child class="rounded-full px-8 py-6 text-lg font-bold">
-          <NuxtLink to="/contact">話をしてみる</NuxtLink>
-        </Button>
+        <div class="relative z-10 pt-4">
+          <Button variant="outline" size="xl" as-child class="rounded-full px-12 py-8 text-xl font-black border-2 border-[#E97451] text-[#E97451] hover:bg-[#E97451] hover:text-[#2D1610] transition-all hover:scale-105 bg-transparent">
+            <NuxtLink to="/contact">話をしてみる</NuxtLink>
+          </Button>
+        </div>
       </section>
     </div>
   </div>
