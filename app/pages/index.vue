@@ -47,11 +47,27 @@
 
               <!-- Mock Links -->
               <div class="w-full space-y-3 pt-4">
-                <div class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between group-hover:bg-brand group-hover:text-white transition-all cursor-pointer">
-                  <span class="font-bold">Latest Post</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </div>
-                <!-- ... other links ... -->
+                <NuxtLink 
+                  to="/blogs" 
+                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[600ms] fill-mode-both"
+                >
+                  <span class="font-bold text-sm">Latest Post</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </NuxtLink>
+                <NuxtLink 
+                  to="#works" 
+                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[700ms] fill-mode-both"
+                >
+                  <span class="font-bold text-sm">Selected Works</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </NuxtLink>
+                <NuxtLink 
+                  to="/contact" 
+                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[800ms] fill-mode-both"
+                >
+                  <span class="font-bold text-sm">Contact</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </NuxtLink>
               </div>
 
               <!-- Background pattern inside mockup -->
@@ -132,7 +148,7 @@
       </section>
 
       <!-- Works Section (Bento Grid) -->
-      <section class="space-y-12">
+      <section id="works" class="space-y-12 scroll-mt-24">
         <div class="text-center space-y-4">
           <div class="inline-block">
             <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-brand-dark">Selected Works</h2>
@@ -147,110 +163,145 @@
         
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px]">
           <!-- Feature project (Large Bento Card) -->
-          <Card class="md:col-span-2 md:row-span-2 overflow-hidden group relative border-none bg-zinc-900">
-            <NuxtLink to="https://next-market-server-actions-silk.vercel.app/" target="_blank" class="block h-full">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+          <Card class="md:col-span-2 md:row-span-2 overflow-hidden group relative border-none bg-zinc-100 dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all duration-500">
+            <NuxtLink to="https://next-market-server-actions-silk.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/next-market.png" 
                 alt="Next Market" 
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div class="absolute bottom-0 left-0 p-8 z-20 space-y-3">
-                <div class="flex gap-2">
-                  <Badge variant="secondary" class="bg-white/20 backdrop-blur text-white border-none text-xs">Next.js</Badge>
-                  <Badge variant="secondary" class="bg-white/20 backdrop-blur text-white border-none text-xs">Full Stack</Badge>
+              <div class="absolute inset-x-0 bottom-0 p-8 z-20 bg-gradient-to-t from-white via-white/90 to-transparent pt-20">
+                <div class="flex gap-2 mb-3">
+                  <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-xs font-bold">Next.js</Badge>
+                  <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-xs font-bold">Full Stack</Badge>
                 </div>
-                <h3 class="text-3xl md:text-4xl font-bold text-white">Next Market</h3>
-                <p class="text-zinc-300 max-w-lg">Server Actionsを活用した、高速でセキュアなマーケットプレイス・アプリケーション。ユーザー認証、商品出品、詳細閲覧機能を備えたモダンなプロダクトです。</p>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Next Market</h3>
+                <p class="text-brand-dark/70 max-w-lg mt-2 text-sm md:text-base leading-relaxed">Server Actionsを活用した、高速でセキュアなマーケットプレイス・アプリケーション。ユーザー認証、商品出品、詳細閲覧機能を備えたモダンなプロダクトです。</p>
               </div>
             </NuxtLink>
           </Card>
 
-          <!-- Small Bento Card 1 -->
-          <Card class="md:col-span-1 md:row-span-1 p-6 flex flex-col justify-between bg-card hover:border-primary/50 transition-colors">
+          <!-- Small Bento Card 1: Blogs -->
+          <Card class="md:col-span-1 md:row-span-1 p-6 flex flex-col justify-between bg-white dark:bg-zinc-900 hover:border-brand/30 transition-all shadow-sm hover:shadow-md border border-zinc-100">
             <NuxtLink to="/blogs" class="flex flex-col h-full justify-between">
               <div class="space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                <div class="w-12 h-12 rounded-2xl bg-brand/10 flex items-center justify-center text-brand">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
                 </div>
-                <h3 class="font-bold text-xl">Blogs</h3>
-                <p class="text-sm text-brand-dark/60">開発の裏側や、日々の技術的な学びをアウトプットしています。</p>
+                <h3 class="font-bold text-xl text-brand-dark">Blogs</h3>
+                <p class="text-sm text-brand-dark/60 leading-relaxed">開発の裏側や、日々の技術的な学びをアウトプットしています。</p>
               </div>
-              <div class="flex items-center gap-2 text-xs font-bold text-[#E97451] italic">
+              <div class="flex items-center gap-2 text-xs font-bold text-brand italic">
                 View All <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </div>
             </NuxtLink>
           </Card>
 
-          <!-- Small Bento Card 2 -->
-          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-zinc-800">
-            <NuxtLink to="https://travel-blog-eosin-chi.vercel.app/" target="_blank" class="block h-full">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10"></div>
+          <!-- Small Bento Card 2: Travel Blog -->
+          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
+            <NuxtLink to="https://travel-blog-eosin-chi.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/travel-blog.png" 
                 alt="Travel Blog" 
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div class="absolute bottom-0 left-0 p-4 z-20 space-y-1">
-                <Badge variant="secondary" class="bg-white/20 backdrop-blur text-white border-none text-[10px] scale-90 origin-left">Next.js</Badge>
-                <h3 class="font-bold text-white text-lg leading-tight">Travel Blog</h3>
+              <div class="absolute inset-x-0 bottom-0 p-4 z-20 bg-white/90 backdrop-blur-sm border-t border-zinc-100">
+                <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">Next.js</Badge>
+                <h3 class="font-bold text-brand-dark text-base leading-tight">Travel Blog</h3>
               </div>
             </NuxtLink>
           </Card>
 
           <!-- Small Bento Card 3: English School -->
-          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-zinc-800">
-            <NuxtLink to="https://english-school-app.vercel.app/" target="_blank" class="block h-full">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10"></div>
+          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
+            <NuxtLink to="https://english-school-app.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/english-school.png" 
                 alt="English School App" 
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div class="absolute bottom-0 left-0 p-4 z-20 space-y-1">
-                <Badge variant="secondary" class="bg-white/20 backdrop-blur text-white border-none text-[10px] scale-90 origin-left">Next.js</Badge>
-                <h3 class="font-bold text-white text-lg leading-tight">English School</h3>
+              <div class="absolute inset-x-0 bottom-0 p-4 z-20 bg-white/90 backdrop-blur-sm border-t border-zinc-100">
+                <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">Next.js</Badge>
+                <h3 class="font-bold text-brand-dark text-base leading-tight">English School</h3>
               </div>
             </NuxtLink>
           </Card>
 
-          <!-- Small Bento Card 4: Future placeholder or more -->
-          <Card class="md:col-span-1 md:row-span-1 p-6 flex flex-col justify-between bg-zinc-100 dark:bg-zinc-800 border-none">
-            <div class="space-y-4">
-              <div class="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          <!-- Small Bento Card 4: Smart Bookshelf -->
+          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
+            <NuxtLink to="https://bookshelf-q9y2.vercel.app/" target="_blank" class="block h-full relative">
+              <nuxt-img 
+                src="/images/smart-bookshelf.png" 
+                alt="Smart Bookshelf" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div class="absolute inset-x-0 bottom-0 p-4 z-20 bg-white/90 backdrop-blur-sm border-t border-zinc-100">
+                <Badge variant="secondary" class="bg-brand/20 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">React + Vite</Badge>
+                <h3 class="font-bold text-brand-dark text-base leading-tight">Smart Bookshelf</h3>
               </div>
-              <h3 class="font-bold text-lg">Next Project</h3>
-              <p class="text-xs text-muted-foreground">新しいプロジェクトを準備中です。</p>
+            </NuxtLink>
+          </Card>
+
+          <!-- Medium Bento Card 5: La Buca Italian Cafe -->
+          <Card class="md:col-span-2 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all">
+            <NuxtLink to="https://la-buca-italian-cafe-pearl.vercel.app/" target="_blank" class="block h-full relative">
+              <nuxt-img 
+                src="/images/la-buca.png" 
+                alt="La Buca Italian Cafe" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-md border-t border-zinc-100">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">Next.js</Badge>
+                    <h3 class="font-bold text-brand-dark text-xl leading-tight">La Buca Italian Cafe</h3>
+                  </div>
+                  <div class="p-2 rounded-full bg-brand/10 text-brand opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 7H7v10"/></svg>
+                  </div>
+                </div>
+                <p class="text-brand-dark/70 text-sm mt-2 max-w-md hidden md:block opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">三田の街角にある隠れ家的なイタリアンカフェ。温かみのあるデザインと高いユーザビリティを両立しています。</p>
+              </div>
+            </NuxtLink>
+          </Card>
+
+          <!-- Small Bento Card Placeholder -->
+          <Card class="md:col-span-2 md:row-span-1 p-8 flex flex-col justify-center bg-zinc-50 dark:bg-zinc-800 border-dashed border-2 border-zinc-200 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center text-zinc-400 group-hover:scale-110 group-hover:bg-brand/20 group-hover:text-brand transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <h3 class="font-bold text-xl text-zinc-500 group-hover:text-brand-dark transition-colors">Next Project</h3>
+              <p class="text-sm text-zinc-400 group-hover:text-brand-dark/60 transition-colors">新しいプロジェクトを準備中です。次はどんな挑戦が待っているでしょうか。</p>
             </div>
           </Card>
         </div>
       </section>
 
       <!-- CTA Section -->
-      <section class="relative overflow-hidden rounded-[3rem] bg-[#2D1610] text-[#E97451] p-12 md:p-24 text-center space-y-10 group">
+      <section class="relative overflow-hidden rounded-[3rem] bg-[#D1E922] text-brand-dark p-12 md:p-24 text-center space-y-10 group shadow-2xl shadow-[#D1E922]/20">
         <!-- Decor -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-[#E97451]/10 rounded-full blur-[100px] -z-0"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#E97451]/5 rounded-full blur-[80px] -z-0"></div>
+        <div class="absolute top-0 right-0 w-80 h-80 bg-black/5 rounded-full blur-[100px] -z-0"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-dark/5 rounded-full blur-[80px] -z-0"></div>
 
         <div class="relative z-10 space-y-6">
-          <h2 class="text-4xl md:text-7xl font-black tracking-tighter text-white leading-[0.9]">
+          <h2 class="text-4xl md:text-7xl font-black tracking-tighter text-brand-dark leading-[0.9]">
             Let's build <br />
-            something <span class="text-brand italic font-serif">extraordinary.</span>
+            something <span class="text-black/40 italic font-serif">extraordinary.</span>
           </h2>
           <div class="flex items-center justify-center">
-            <span class="px-6 py-2 rounded-full bg-white text-brand text-sm font-bold tracking-[0.25em] uppercase shadow-xl shadow-black/10">
+            <span class="px-6 py-2 rounded-full bg-brand-dark text-[#D1E922] text-sm font-bold tracking-[0.25em] uppercase shadow-lg shadow-black/10 transition-transform group-hover:scale-105 duration-500">
               新しいプロジェクトを始めましょう
             </span>
           </div>
         </div>
         
-        <p class="relative z-10 text-brand/90 text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+        <p class="relative z-10 text-brand-dark/80 text-xl font-medium max-w-2xl mx-auto leading-relaxed">
           現在、フリーランスとしてのプロジェクトや技術コンサルティングのご依頼を承っております。
           あなたのビジョンを形にするお手伝いをさせてください。
         </p>
         <div class="relative z-10 pt-4">
-          <Button variant="outline" size="xl" as-child class="rounded-full px-12 py-8 text-xl font-black border-2 border-[#E97451] text-[#E97451] hover:bg-[#E97451] hover:text-[#2D1610] transition-all hover:scale-105 bg-transparent">
+          <Button as-child class="rounded-full px-12 py-8 text-xl font-black bg-brand-dark text-[#D1E922] hover:bg-black hover:scale-105 transition-all outline-none border-none shadow-xl shadow-brand-dark/20">
             <NuxtLink to="/contact">話をしてみる</NuxtLink>
           </Button>
         </div>
