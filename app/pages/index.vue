@@ -163,7 +163,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px]">
           <!-- Feature project (Large Bento Card) -->
-          <Card class="md:col-span-2 md:row-span-2 overflow-hidden group relative border-none bg-zinc-100 dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all duration-500">
+          <Card class="md:col-span-2 md:row-span-2 overflow-hidden group relative border-none bg-zinc-100 dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all duration-500 py-0 gap-0">
             <NuxtLink to="https://next-market-server-actions-silk.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/next-market.png" 
@@ -198,7 +198,7 @@
           </Card>
 
           <!-- Small Bento Card 2: Travel Blog -->
-          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
+          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all py-0 gap-0">
             <NuxtLink to="https://travel-blog-eosin-chi.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/travel-blog.png" 
@@ -213,7 +213,7 @@
           </Card>
 
           <!-- Small Bento Card 3: English School -->
-          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
+          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all py-0 gap-0">
             <NuxtLink to="https://english-school-app.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/english-school.png" 
@@ -228,7 +228,7 @@
           </Card>
 
           <!-- Small Bento Card 4: Smart Bookshelf -->
-          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all">
+          <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-all py-0 gap-0">
             <NuxtLink to="https://bookshelf-q9y2.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/smart-bookshelf.png" 
@@ -243,7 +243,7 @@
           </Card>
 
           <!-- Medium Bento Card 5: La Buca Italian Cafe -->
-          <Card class="md:col-span-2 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all">
+          <Card class="md:col-span-2 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all py-0 gap-0">
             <NuxtLink to="https://la-buca-italian-cafe-pearl.vercel.app/" target="_blank" class="block h-full relative">
               <nuxt-img 
                 src="/images/la-buca.png" 
@@ -265,15 +265,73 @@
             </NuxtLink>
           </Card>
 
-          <!-- Small Bento Card Placeholder -->
-          <Card class="md:col-span-2 md:row-span-1 p-8 flex flex-col justify-center bg-zinc-50 dark:bg-zinc-800 border-dashed border-2 border-zinc-200 group">
-            <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center text-zinc-400 group-hover:scale-110 group-hover:bg-brand/20 group-hover:text-brand transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          <!-- Medium Bento Card 6: PON DESIGN -->
+          <Card class="md:col-span-2 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all py-0 gap-0">
+            <NuxtLink to="https://pon-design.vercel.app/" target="_blank" class="block h-full relative">
+              <nuxt-img 
+                src="/images/pon-design.png" 
+                alt="PON DESIGN" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-md border-t border-zinc-100">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">Next.js</Badge>
+                    <h3 class="font-bold text-brand-dark text-xl leading-tight">PON DESIGN</h3>
+                  </div>
+                  <div class="p-2 rounded-full bg-brand/10 text-brand opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 7H7v10"/></svg>
+                  </div>
+                </div>
+                <p class="text-brand-dark/70 text-sm mt-2 max-w-md hidden md:block opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">「WEB DESIGN SPECIALIST」を掲げる制作会社のコーポレートサイト。洗練されたビジュアルと没入感のあるレイアウトを実現。</p>
               </div>
-              <h3 class="font-bold text-xl text-zinc-500 group-hover:text-brand-dark transition-colors">Next Project</h3>
-              <p class="text-sm text-zinc-400 group-hover:text-brand-dark/60 transition-colors">新しいプロジェクトを準備中です。次はどんな挑戦が待っているでしょうか。</p>
-            </div>
+            </NuxtLink>
+          </Card>
+
+          <!-- Medium Bento Card 7: Furniture Design -->
+          <Card class="md:col-span-2 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all py-0 gap-0">
+            <NuxtLink to="https://store-app-blue.vercel.app/" target="_blank" class="block h-full relative">
+              <nuxt-img 
+                src="/images/furniture-design.png" 
+                alt="Furniture Design" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-md border-t border-zinc-100">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">React + Vite</Badge>
+                    <h3 class="font-bold text-brand-dark text-xl leading-tight">Furniture Design</h3>
+                  </div>
+                  <div class="p-2 rounded-full bg-brand/10 text-brand opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 7H7v10"/></svg>
+                  </div>
+                </div>
+                <p class="text-brand-dark/70 text-sm mt-2 max-w-md hidden md:block opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">ミニマルで洗練された家具を扱うオンラインカタログサイト。機能美を強調したクリーンなレイアウトが特徴です。</p>
+              </div>
+            </NuxtLink>
+          </Card>
+
+          <!-- Medium Bento Card 8: ENGBODY -->
+          <Card class="md:col-span-2 md:row-span-1 overflow-hidden group relative border border-zinc-100 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl transition-all py-0 gap-0">
+            <NuxtLink to="https://engbody-app.vercel.app/" target="_blank" class="block h-full relative">
+              <nuxt-img 
+                src="/images/engbody.png" 
+                alt="ENGBODY" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-md border-t border-zinc-100">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <Badge variant="secondary" class="bg-brand/10 text-brand border-none text-[10px] scale-90 origin-left font-bold mb-1">Next.js</Badge>
+                    <h3 class="font-bold text-brand-dark text-xl leading-tight">ENGBODY</h3>
+                  </div>
+                  <div class="p-2 rounded-full bg-brand/10 text-brand opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 7H7v10"/></svg>
+                  </div>
+                </div>
+                <p class="text-brand-dark/70 text-sm mt-2 max-w-md hidden md:block opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">英会話とパーソナルトレーニングを融合したユニークなジムのウェブサイト。クリーンでエネルギッシュなビジュアルが特徴です。</p>
+              </div>
+            </NuxtLink>
           </Card>
         </div>
       </section>
