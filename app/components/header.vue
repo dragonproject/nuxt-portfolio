@@ -15,25 +15,25 @@ const closeMenu = () => {
 <template>
   <header class="fixed top-6 left-0 right-0 z-50 px-6 pointer-events-none">
     <div class="mx-auto flex flex-col items-center pointer-events-auto">
-      <div class="flex h-20 w-full max-w-7xl items-center justify-between px-8 bg-white/90 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] rounded-full text-[#2D1610]">
+      <div class="flex h-20 w-full max-w-7xl items-center justify-between px-8 bg-white/90 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] rounded-full text-brand-dark">
         <NuxtLink to="/" class="flex items-center space-x-2 transition-transform hover:scale-105 active:scale-95" @click="closeMenu">
           <img src="/images/logo.svg" alt="logo" class="h-10 w-auto object-contain" />
-          <span class="text-lg font-black tracking-tight transition-colors group-hover:text-[#E97451]">Ryutaro's Portfolio</span>
+          <span class="text-lg font-black tracking-tight transition-colors group-hover:text-brand">Ryutaro's Portfolio</span>
         </NuxtLink>
 
         <div class="flex items-center gap-10">
           <nav class="hidden md:flex items-center space-x-10">
             <NuxtLink to="/" class="group flex items-baseline gap-1.5 overflow-hidden">
-              <span class="text-lg font-black tracking-tight transition-colors group-hover:text-[#E97451]">Home</span>
-              <span class="text-[10px] font-bold tracking-widest text-[#2D1610]/40 transition-colors group-hover:text-[#E97451]/60">（ホーム）</span>
+              <span class="text-lg font-black tracking-tight transition-colors group-hover:text-brand">Home</span>
+              <span class="text-[10px] font-bold tracking-widest text-brand-dark/40 transition-colors group-hover:text-brand/60">（ホーム）</span>
             </NuxtLink>
             <NuxtLink to="/blogs" class="group flex items-baseline gap-1.5 overflow-hidden">
-              <span class="text-lg font-black tracking-tight transition-colors group-hover:text-[#E97451]">Blogs</span>
-              <span class="text-[10px] font-bold tracking-widest text-[#2D1610]/40 transition-colors group-hover:text-[#E97451]/60">（ブログ）</span>
+              <span class="text-lg font-black tracking-tight transition-colors group-hover:text-brand">Blogs</span>
+              <span class="text-[10px] font-bold tracking-widest text-brand-dark/40 transition-colors group-hover:text-brand/60">（ブログ）</span>
             </NuxtLink>
             <NuxtLink to="/contact" class="group flex items-baseline gap-1.5 overflow-hidden">
-              <span class="text-lg font-black tracking-tight transition-colors group-hover:text-[#E97451]">Contact</span>
-              <span class="text-[10px] font-bold tracking-widest text-[#2D1610]/40 transition-colors group-hover:text-[#E97451]/60">（お問い合わせ）</span>
+              <span class="text-lg font-black tracking-tight transition-colors group-hover:text-brand">Contact</span>
+              <span class="text-[10px] font-bold tracking-widest text-brand-dark/40 transition-colors group-hover:text-brand/60">（お問い合わせ）</span>
             </NuxtLink>
           </nav>
 
@@ -41,7 +41,7 @@ const closeMenu = () => {
             <Button 
               variant="ghost" 
               size="icon" 
-              class="md:hidden rounded-full hover:bg-[#E97451]/10"
+              class="md:hidden rounded-full hover:bg-brand/10"
               @click="toggleMenu"
             >
               <span class="sr-only">Toggle Menu</span>
@@ -65,36 +65,36 @@ const closeMenu = () => {
           <nav class="w-full max-w-sm bg-white/95 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] rounded-3xl p-6 flex flex-col space-y-2">
             <NuxtLink 
               to="/" 
-              class="group flex items-center justify-between p-4 rounded-2xl transition-colors hover:bg-[#E97451]/10"
+              class="group flex items-center justify-between p-4 rounded-2xl transition-colors hover:bg-brand/10"
               @click="closeMenu"
             >
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-black tracking-tight text-[#2D1610] group-hover:text-[#E97451]">Home</span>
-                <span class="text-xs font-bold tracking-widest text-[#2D1610]/40 group-hover:text-[#E97451]/60">（ホーム）</span>
+                <span class="text-xl font-black tracking-tight text-brand-dark group-hover:text-brand">Home</span>
+                <span class="text-xs font-bold tracking-widest text-brand-dark/40 group-hover:text-brand/60">（ホーム）</span>
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#2D1610]/20 group-hover:text-[#E97451]/40"><path d="m9 18 6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-dark/20 group-hover:text-brand/40"><path d="m9 18 6-6-6-6"/></svg>
             </NuxtLink>
             <NuxtLink 
               to="/blogs" 
-              class="group flex items-center justify-between p-4 rounded-2xl transition-colors hover:bg-[#E97451]/10"
+              class="group flex items-center justify-between p-4 rounded-2xl transition-colors hover:bg-brand/10"
               @click="closeMenu"
             >
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-black tracking-tight text-[#2D1610] group-hover:text-[#E97451]">Blogs</span>
-                <span class="text-xs font-bold tracking-widest text-[#2D1610]/40 group-hover:text-[#E97451]/60">（ブログ）</span>
+                <span class="text-xl font-black tracking-tight text-brand-dark group-hover:text-brand">Blogs</span>
+                <span class="text-xs font-bold tracking-widest text-brand-dark/40 group-hover:text-brand/60">（ブログ）</span>
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#2D1610]/20 group-hover:text-[#E97451]/40"><path d="m9 18 6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-dark/20 group-hover:text-brand/40"><path d="m9 18 6-6-6-6"/></svg>
             </NuxtLink>
             <NuxtLink 
               to="/contact" 
-              class="group flex items-center justify-between p-4 rounded-2xl transition-colors hover:bg-[#E97451]/10"
+              class="group flex items-center justify-between p-4 rounded-2xl transition-colors hover:bg-brand/10"
               @click="closeMenu"
             >
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-black tracking-tight text-[#2D1610] group-hover:text-[#E97451]">Contact</span>
-                <span class="text-xs font-bold tracking-widest text-[#2D1610]/40 group-hover:text-[#E97451]/60">（お問い合わせ）</span>
+                <span class="text-xl font-black tracking-tight text-brand-dark group-hover:text-brand">Contact</span>
+                <span class="text-xs font-bold tracking-widest text-brand-dark/40 group-hover:text-brand/60">（お問い合わせ）</span>
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#2D1610]/20 group-hover:text-[#E97451]/40"><path d="m9 18 6-6-6-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-dark/20 group-hover:text-brand/40"><path d="m9 18 6-6-6-6"/></svg>
             </NuxtLink>
           </nav>
         </div>
