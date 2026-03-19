@@ -15,9 +15,9 @@
               </span>
               <div class="h-[2px] w-16 bg-brand-dark/10"></div>
             </div>
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-brand-dark leading-[0.8] drop-shadow-sm">
+            <h1 class="text-[clamp(4.5rem,12vw,9.5rem)] font-black tracking-tighter text-brand-dark leading-[0.8] drop-shadow-sm">
               Thought <br />
-              <span class="text-black/30 italic font-serif">in Motion.</span>
+              <span class="text-black/20 italic font-serif">in Motion.</span>
             </h1>
           </div>
 
