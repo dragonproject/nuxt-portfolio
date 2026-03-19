@@ -1,13 +1,44 @@
 <template>
-  <div class="min-h-screen pt-24 pb-16">
-    <div class="container space-y-20">
-      <!-- Header -->
-      <div class="max-w-4xl space-y-6">
-        <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-[#2D1610]">Blogs</h1>
-        <p class="text-xl md:text-2xl text-[#2D1610]/60 font-medium leading-relaxed">
-          技術、創造性、そして日々の開発の中から得た気づきを発信しています。
-        </p>
+  <div class="min-h-screen">
+    <!-- Vivid Header Section -->
+    <section class="bg-[#D1E922] pt-32 pb-24 md:pt-48 md:pb-36 relative overflow-hidden transition-all duration-700">
+      <!-- Decorative Elements -->
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-20 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3"></div>
+      <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-dark opacity-5 rounded-full blur-[80px] -translate-x-1/4 translate-y-1/4"></div>
+
+      <div class="container relative z-10">
+        <div class="max-w-4xl space-y-10">
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <span class="px-5 py-2 rounded-full bg-brand-dark text-[#D1E922] text-xs font-black tracking-[0.3em] uppercase shadow-2xl shadow-brand-dark/20">
+                Journal
+              </span>
+              <div class="h-[2px] w-16 bg-brand-dark/10"></div>
+            </div>
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-brand-dark leading-[0.8] drop-shadow-sm">
+              Thought <br />
+              <span class="text-black/30 italic font-serif">in Motion.</span>
+            </h1>
+          </div>
+
+          <div class="space-y-8">
+            <h2 class="text-2xl md:text-4xl font-black text-brand-dark/90 max-w-2xl leading-tight">
+              技術、創造性、そして日々の開発の中から得た気づきを発信しています。
+            </h2>
+            <div class="flex items-start gap-6 pt-4">
+              <div class="w-1.5 h-24 bg-brand-dark/10 rounded-full hidden md:block"></div>
+              <p class="text-lg md:text-2xl text-brand-dark/70 font-bold leading-relaxed max-w-3xl">
+                フロントエンド開発の最前線から、クリエイティブな実験、
+                そしてプロフェッショナルとしての学びをシェア。
+                あなたの「創る力」を加速させるための航海日誌です。
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <div class="container py-24 space-y-24">
 
       <!-- Main Content -->
       <div v-if="data" class="space-y-24">
@@ -89,7 +120,7 @@
 </template>
 
 <script setup>
-const blogsPerPage = 5;
+const blogsPerPage = 9;
 
 const { data } = await useAsyncData("blogQuery", () =>
   queryCollection("blogs").order("date", "DESC").limit(blogsPerPage).all()

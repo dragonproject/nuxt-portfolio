@@ -1,13 +1,18 @@
 <template>
-  <h2 class="paginationWrapper">
-    <NuxtLink
+  <div class="flex items-center gap-3">
+    <Button
       v-for="(paginationLink, index) in paginationLinks"
-      :to="paginationLink"
       :key="index"
+      as-child
+      variant="outline"
+      size="sm"
+      class="w-10 h-10 rounded-xl font-bold transition-all hover:bg-brand hover:text-white hover:border-brand"
     >
-      {{ index + 1 }}
-    </NuxtLink>
-  </h2>
+      <NuxtLink :to="paginationLink">
+        {{ index + 1 }}
+      </NuxtLink>
+    </Button>
+  </div>
 </template>
 
 <script setup>
