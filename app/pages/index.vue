@@ -30,7 +30,7 @@
           </div>
 
           <!-- Right Content: Floating Mockup (Linktree Style) -->
-          <div class="relative order-1 lg:order-2 flex justify-center animate-in fade-in zoom-in duration-1000 delay-300">
+          <div class="relative order-1 lg:order-2 flex justify-center animate-in fade-in zoom-in duration-1000 delay-300 lg:translate-y-12">
             <div class="w-[320px] h-[640px] bg-white rounded-[3rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] border-[8px] border-brand-dark p-6 flex flex-col items-center space-y-8 relative overflow-hidden group">
               <!-- Top bar -->
               <div class="w-16 h-1.5 bg-brand-dark/10 rounded-full mb-4"></div>
