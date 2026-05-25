@@ -50,21 +50,21 @@
               <div class="w-full space-y-3 pt-4">
                 <NuxtLink 
                   to="/blogs" 
-                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[600ms] fill-mode-both"
+                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:600ms] fill-mode-both"
                 >
                   <span class="font-bold text-sm">Latest Post</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </NuxtLink>
                 <NuxtLink 
                   to="#works" 
-                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[700ms] fill-mode-both"
+                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:700ms] fill-mode-both"
                 >
                   <span class="font-bold text-sm">Selected Works</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </NuxtLink>
                 <NuxtLink 
                   to="/contact" 
-                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[800ms] fill-mode-both"
+                  class="w-full p-4 bg-zinc-100 rounded-xl flex items-center justify-between hover:bg-brand hover:text-white hover:scale-105 active:scale-95 transition-all cursor-pointer text-brand-dark group/item shadow-sm hover:shadow-lg hover:ring-1 hover:ring-white/20 animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:800ms] fill-mode-both"
                 >
                   <span class="font-bold text-sm">Contact</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 group-hover/item:opacity-100 transition-all group-hover/item:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
