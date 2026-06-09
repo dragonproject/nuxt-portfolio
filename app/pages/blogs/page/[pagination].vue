@@ -50,20 +50,29 @@
 </template>
 
 <script setup>
+// 1ページあたりに表示するブログ記事の件数を設定します
 const blogsPerPage = 5;
+
+// 現在のURL（例: /blogs/page/2）から、ページ番号（この場合は "2"）を取得します
 const currentPage = useRoute().params.pagination;
 
+// Nuxtの機能（useAsyncData）を使って、現在のページに表示するブログ記事データを取得します
 const { data } = await useAsyncData(`blogQuery-${currentPage}`, () =>
   queryCollection("blogs")
-    .order("date", "DESC")
-    .limit(blogsPerPage)
-    .skip(blogsPerPage * (currentPage - 1))
-    .all()
+    .order("date", "DESC") // 日付が新しい順（降順）に並び替えます
+    .limit(blogsPerPage)   // 取得する件数を1ページあたりの数（5件）に制限します
+    .skip(blogsPerPage * (currentPage - 1)) // 前のページまでの記事を読み飛ばします（例: 2ページ目なら最初の5件をスキップ）
+    .all()                 // 上記の条件に合ったデータを取得します
 );
 
+// ページネーション（全体のページ数）を計算するために、一旦すべてのブログ記事を取得します
 const allBlogs = await queryCollection("blogs").all();
+
+// 「全記事数 ÷ 1ページあたりの件数」を切り上げることで、全体のページ数を算出します
+// （例: 全12件なら 12 / 5 = 2.4 ＝ 切り上げて全3ページになる）
 const numberPages = Math.ceil(allBlogs.length / blogsPerPage);
 
+// ブラウザのタブに表示されるタイトルや、検索エンジン用の説明文(description)を動的に設定します
 useHead({
   title: `Blog | Page ${currentPage}`,
   meta: [{ name: "description", content: `エンジニアブログ - ページ ${currentPage}` }],

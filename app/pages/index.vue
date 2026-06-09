@@ -6,9 +6,13 @@
       <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-orange-400 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
       <div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-amber-300 rounded-full blur-[100px] opacity-20"></div>
 
-      <div class="container relative z-10 py-20">
+      <!-- ヘッダとの被りを防ぐため、上部に十分な余白(pt-32, lg:pt-40)を確保 -->
+      <!-- z-10: 背景の装飾要素(z-index: 0)よりも手前に表示する -->
+      <div class="container relative z-10 pt-32 pb-20 lg:pt-40">
+        <!-- lg:grid-cols-2: PC(lg)サイズ以上で2カラムのグリッドレイアウトにする -->
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <!-- Left Content: Bold Typography -->
+          <!-- order-2 lg:order-1: スマホでは下(2番目)に、PCでは左(1番目)に配置するレスポンシブな順序指定 -->
           <div class="space-y-10 order-2 lg:order-1 text-center lg:text-left">
             <h1 class="text-[clamp(3.5rem,10vw,100px)] font-black leading-[0.9] text-brand-dark tracking-tighter animate-in fade-in slide-in-from-left-8 duration-1000">
               Ideas that <br />
@@ -91,7 +95,9 @@
         <!-- Abstract Decoration -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
         
+        <!-- md:grid-cols-5: 中間サイズ以上で5等分のグリッドにし、3:2の比率で左右のカラムを分ける -->
         <div class="container relative z-10 grid md:grid-cols-5 gap-16 items-center">
+          <!-- md:col-span-3: 5カラムのうち3カラム分(60%)の幅を使用 -->
           <div class="md:col-span-3 space-y-10">
             <div class="space-y-4">
               <h2 class="text-[clamp(3rem,8vw,5rem)] font-black tracking-tighter leading-[0.8]">Passion <br/>for Code</h2>
@@ -110,6 +116,7 @@
           </div>
           <div class="md:col-span-2 relative group max-w-sm mx-auto w-full">
             <div class="relative rounded-[3rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-700 hover:scale-[1.03]">
+              <!-- grayscale-[20%] group-hover:grayscale-0: 通常時は少し白黒にし、ホバー時にカラーに戻すエフェクト -->
               <nuxt-img 
                 src="/images/profile.jpg" 
                 alt="profile" 
@@ -141,7 +148,10 @@
             </p>
           </div>
 
+          <!-- レスポンシブなグリッド: スマホで1列、タブレットで2列、PCで3列 -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- v-for: scriptで定義したskills配列を展開してカードを生成 -->
+            <!-- backdrop-blur-3xl: 背景をすりガラスのようにぼかす(グラスモーフィズム)効果 -->
             <Card 
               v-for="skill in skills" 
               :key="skill.name" 
@@ -204,22 +214,24 @@
             </p>
           </div>
           
+          <!-- auto-rows-[300px]: グリッドの1行の高さを300pxに固定し、Bento UI(弁当箱のようなレイアウト)を構築 -->
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8 auto-rows-[300px]">
             <!-- Feature project (Large Bento Card) -->
+            <!-- md:col-span-2 md:row-span-2: 2列×2行分の大きなスペースを使用するメインカード -->
             <Card class="md:col-span-2 md:row-span-2 overflow-hidden group relative border-none bg-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] hover:shadow-[0_60px_120px_-30px_rgba(0,0,0,0.3)] transition-all duration-700 py-0 gap-0 rounded-[4rem]">
-              <NuxtLink to="https://next-market-server-actions-silk.vercel.app/" target="_blank" class="block h-full relative">
+              <NuxtLink to="https://travel-blog-eosin-chi.vercel.app/" target="_blank" class="block h-full relative">
                 <nuxt-img 
-                  src="/images/next-market.png" 
-                  alt="Next Market" 
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  src="/images/travel-blog.png" 
+                  alt="Travel Blog" 
+                  class="absolute inset-0 w-full h-full object-cover object-top origin-top scale-[2] transition-transform duration-1000 group-hover:scale-[2.1]"
                 />
                 <div class="absolute inset-x-0 bottom-0 p-12 z-20 bg-gradient-to-t from-white via-white/95 to-transparent pt-32">
                   <div class="flex gap-2 mb-4">
                     <Badge variant="secondary" class="bg-[#FF2E8A]/10 text-[#FF2E8A] border-none text-xs font-black px-4 py-1">Next.js</Badge>
-                    <Badge variant="secondary" class="bg-[#FF2E8A]/10 text-[#FF2E8A] border-none text-xs font-black px-4 py-1">Full Stack</Badge>
+                    <Badge variant="secondary" class="bg-[#FF2E8A]/10 text-[#FF2E8A] border-none text-xs font-black px-4 py-1">Front End</Badge>
                   </div>
-                  <h3 class="text-4xl md:text-6xl font-black text-brand-dark tracking-tight leading-none mb-4">Next Market</h3>
-                  <p class="text-brand-dark/70 max-w-lg text-sm md:text-lg leading-relaxed font-bold">Server Actionsを活用した、高速でセキュアなマーケットプレイス。モダンなWeb体験の追求。</p>
+                  <h3 class="text-4xl md:text-6xl font-black text-brand-dark tracking-tight leading-none mb-4">Travel Blog</h3>
+                  <p class="text-brand-dark/70 max-w-lg text-sm md:text-lg leading-relaxed font-bold">世界中の美しい風景と体験を記録する、モダンな旅行ブログプラットフォーム。洗練されたUI/UXを追求。</p>
                 </div>
               </NuxtLink>
             </Card>
@@ -240,20 +252,20 @@
               </NuxtLink>
             </Card>
 
-            <!-- Small Bento Card 2: Travel Blog -->
+            <!-- Small Bento Card 2: Smart Bookshelf -->
             <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-white shadow-xl hover:shadow-black/20 transition-all rounded-[3rem]">
-              <NuxtLink to="https://travel-blog-eosin-chi.vercel.app/" target="_blank" class="block h-full relative">
-                <nuxt-img src="/images/travel-blog.png" alt="Travel Blog" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <NuxtLink to="https://bookshelf-q9y2.vercel.app/" target="_blank" class="block h-full relative">
+                <nuxt-img src="/images/smart-bookshelf.png" alt="Smart Bookshelf" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-sm">
-                  <Badge variant="secondary" class="bg-[#FF2E8A]/10 text-[#FF2E8A] border-none text-[10px] font-black mb-1">Next.js</Badge>
-                  <h3 class="font-black text-brand-dark text-lg leading-tight">Travel Blog</h3>
+                  <Badge variant="secondary" class="bg-[#FF2E8A]/10 text-[#FF2E8A] border-none text-[10px] font-black mb-1">React</Badge>
+                  <h3 class="font-black text-brand-dark text-lg leading-tight">Smart Bookshelf</h3>
                 </div>
               </NuxtLink>
             </Card>
 
             <Card v-for="(work, index) in [
               { title: 'English School', img: '/images/english-school.png', url: 'https://english-school-app.vercel.app/', tech: 'Next.js' },
-              { title: 'Smart Bookshelf', img: '/images/smart-bookshelf.png', url: 'https://bookshelf-q9y2.vercel.app/', tech: 'React' },
+              { title: 'Next Market', img: '/images/next-market.png', url: 'https://next-market-server-actions-silk.vercel.app/', tech: 'Next.js' },
               { title: 'La Buca Cafe', img: '/images/la-buca.png', url: 'https://la-buca-italian-cafe-pearl.vercel.app/', tech: 'Next.js' },
               { title: 'PON DESIGN', img: '/images/pon-design.png', url: 'https://pon-design.vercel.app/', tech: 'Next.js' }
             ]" :key="index" class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-white shadow-xl hover:shadow-black/20 transition-all rounded-[3rem]">
@@ -346,6 +358,7 @@ const skills = [
   },
 ]
 
+// useHead: Nuxtの組み込み機能。ページごとの<title>や<meta>タグ(SEO向けの設定)を上書きできる
 useHead({
   title: "Ryutaro Seki | Official Portfolio",
   meta: [{ name: "description", content: "Ryutaro Sekiのポートフォリオサイトです。JavaScript開発のエキスパート。" }],

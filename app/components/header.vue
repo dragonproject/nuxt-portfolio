@@ -16,9 +16,9 @@ const closeMenu = () => {
   <header class="fixed top-6 left-0 right-0 z-50 px-6 pointer-events-none">
     <div class="mx-auto flex flex-col items-center pointer-events-auto">
       <div class="flex h-20 w-full max-w-7xl items-center justify-between px-8 bg-white/90 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] rounded-full text-brand-dark">
-        <NuxtLink to="/" class="flex items-center space-x-2 transition-transform hover:scale-105 active:scale-95" @click="closeMenu">
-          <img src="/images/logo.svg" alt="logo" class="h-10 w-auto object-contain" />
-          <span class="text-lg font-black tracking-tight transition-colors group-hover:text-brand">Ryutaro's Portfolio</span>
+        <NuxtLink to="/" class="flex items-center space-x-4 transition-transform hover:scale-105 active:scale-95 -ml-4" @click="closeMenu">
+          <img src="/images/logo.svg" alt="logo" class="h-[100px] w-auto object-contain" />
+          <span class="text-xl md:text-2xl font-black tracking-tight transition-colors group-hover:text-brand">Ryutaro's Portfolio</span>
         </NuxtLink>
 
         <div class="flex items-center gap-10">
