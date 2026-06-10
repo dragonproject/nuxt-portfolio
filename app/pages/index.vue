@@ -216,7 +216,7 @@
           
           <!-- auto-rows-[300px]: グリッドの1行の高さを300pxに固定し、Bento UI(弁当箱のようなレイアウト)を構築 -->
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8 auto-rows-[300px]">
-            <!-- Feature project (Large Bento Card) -->
+            <!-- Feature project (Large Card) -->
             <!-- md:col-span-2 md:row-span-2: 2列×2行分の大きなスペースを使用するメインカード -->
             <Card class="md:col-span-2 md:row-span-2 overflow-hidden group relative border-none bg-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] hover:shadow-[0_60px_120px_-30px_rgba(0,0,0,0.3)] transition-all duration-700 py-0 gap-0 rounded-[4rem]">
               <NuxtLink to="https://travel-blog-eosin-chi.vercel.app/" target="_blank" class="block h-full relative">
@@ -236,7 +236,7 @@
               </NuxtLink>
             </Card>
 
-            <!-- Small Bento Card 1: Blogs -->
+            <!-- Small Card 1: Blogs -->
             <Card class="md:col-span-1 md:row-span-1 p-8 flex flex-col justify-between bg-brand-dark text-[#FF2E8A] hover:bg-black transition-all shadow-2xl rounded-[3rem] border-none group/blog">
               <NuxtLink to="/blogs" class="flex flex-col h-full justify-between">
                 <div class="space-y-6">
@@ -252,8 +252,8 @@
               </NuxtLink>
             </Card>
 
-            <!-- Small Bento Card 2: Smart Bookshelf -->
-            <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-white shadow-xl hover:shadow-black/20 transition-all rounded-[3rem]">
+            <!-- Small Card 2: Smart Bookshelf -->
+            <Card class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-white shadow-xl hover:shadow-black/20 transition-all p-0 rounded-[3rem]">
               <NuxtLink to="https://bookshelf-q9y2.vercel.app/" target="_blank" class="block h-full relative">
                 <nuxt-img src="/images/smart-bookshelf.png" alt="Smart Bookshelf" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-sm">
@@ -264,11 +264,15 @@
             </Card>
 
             <Card v-for="(work, index) in [
+              { title: 'Premium Market', img: '/images/premium-market.png', url: 'https://dragonproject-graphql-and-react.vercel.app/', tech: 'React' },
+              { title: 'Hozumi Modernized', img: '/images/hozumi.png', url: 'https://hozumi-modernized.vercel.app/', tech: 'Next.js' },
+              { title: 'Flask Blog', img: '/images/flask-blog.png', url: 'https://my-awesome-flask-blog.onrender.com/', tech: 'Flask' },
+              { title: 'Engbody App', img: '/images/engbody.png', url: 'https://engbody-app.vercel.app/', tech: 'Next.js' },
               { title: 'English School', img: '/images/english-school.png', url: 'https://english-school-app.vercel.app/', tech: 'Next.js' },
               { title: 'Next Market', img: '/images/next-market.png', url: 'https://next-market-server-actions-silk.vercel.app/', tech: 'Next.js' },
               { title: 'La Buca Cafe', img: '/images/la-buca.png', url: 'https://la-buca-italian-cafe-pearl.vercel.app/', tech: 'Next.js' },
               { title: 'PON DESIGN', img: '/images/pon-design.png', url: 'https://pon-design.vercel.app/', tech: 'Next.js' }
-            ]" :key="index" class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-white shadow-xl hover:shadow-black/20 transition-all rounded-[3rem]">
+            ]" :key="index" class="md:col-span-1 md:row-span-1 overflow-hidden group relative border-none bg-white shadow-xl hover:shadow-black/20 transition-all p-0 rounded-[3rem]">
               <NuxtLink :to="work.url" target="_blank" class="block h-full relative">
                 <nuxt-img :src="work.img" :alt="work.title" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div class="absolute inset-x-0 bottom-0 p-6 z-20 bg-white/95 backdrop-blur-sm">
